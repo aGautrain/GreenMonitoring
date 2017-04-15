@@ -1,0 +1,41 @@
+<div class="card card-block">
+    <h4 class="card-title card-value">{{tracking.correspondingTo.label}}</h4>
+    <table class="diagram">
+        <thead>
+            <tr>
+                <th rowspan="2">Values</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="y-axis">
+                    <div class="max">
+                        Max : {{tracking.correspondingTo.max}} {{tracking.correspondingTo.unit}}
+                    </div>
+                    <div class="avg">
+                        Avg : {{(tracking.correspondingTo.max + tracking.correspondingTo.min) / 2}} {{tracking.correspondingTo.unit}}
+                    </div>
+                    <div class="min">
+                        Min : {{tracking.correspondingTo.min}} {{tracking.correspondingTo.unit}}
+                    </div>
+                </td>
+                <td *ngFor="let rec of tracking.records" class="bar-sample-container">
+                    <div class="bar-sample" [style.height.px]="getRelativeHeight(rec)">
+                        <span class="sample-value">
+                            {{rec.value}}{{tracking.correspondingTo.unit}}
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Time
+                </th>
+                <td *ngFor="let rec of tracking.records">
+                    {{ rec.date | date: "HH:mm"}}<br/>
+                    <span class="days">-{{ rec.date | date: "dd/MM"}}-</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

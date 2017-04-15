@@ -1,0 +1,24 @@
+<div class="container mt-2">
+    <div class="card card-block">
+        <nav class="navbar navbar-dark bg-inverse mb-1">
+            <h1 class="navbar-brand mb-0">Latest measures</h1>
+        </nav>
+        <div class="row">
+            <app-tracker class="col-sm-6" [tracking]="temperature" ></app-tracker>
+            <app-tracker class="col-sm-6" [tracking]="humidity" ></app-tracker>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-2">
+    <div class="card card-block">
+        <nav class="navbar mb-1">
+            <h1 class="navbar-brand mb-0">Last 48 hours overview</h1>
+        </nav>
+        <div class="row">
+            <app-diagram class="col-xs-12" [maxHeight]="100" [baseOffset]="-50" [tracking]="temperature"></app-diagram>
+            <app-diagram class="col-xs-12" [maxHeight]="100" [baseOffset]="0" [tracking]="humidity"></app-diagram>
+        </div>
+    </div>
+</div>
+

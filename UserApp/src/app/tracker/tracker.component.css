@@ -1,0 +1,35 @@
+:host li
+{
+    display: block;
+    text-align: center;
+}
+
+:host li:nth-child(1)
+{
+    opacity: 0.9;
+}
+
+:host li:nth-child(2)
+{
+    opacity: 0.7;
+}
+
+:host li:nth-child(3)
+{
+    opacity: 0.5;
+}
+
+:host .card-date
+{
+    font-style: italic;
+}
+
+:host .card-value
+{
+    font-weight: bold;
+}
+
+:host .card-title
+{
+    text-align: center;
+}

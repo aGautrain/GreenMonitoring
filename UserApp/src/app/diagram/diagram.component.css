@@ -1,0 +1,57 @@
+:host
+{
+    overflow: hidden;
+}
+
+:host .diagram
+{
+    /* The full table */
+    text-align: center;
+    width: 100%;
+    vertical-align: bottom;
+    
+}
+
+
+:host .bar-sample-container
+{
+    vertical-align: bottom;
+    border-bottom: solid lightgray 1px;
+}
+
+
+:host .bar-sample
+{
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+    width: 50px;
+    background-color: #4b42f4;
+    line-height:0px;
+}
+
+:host .bar-sample:hover .sample-value
+{
+    color: black;
+}
+
+:host .sample-value
+{
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    font-size: 150%;
+    color: transparent;
+}
+
+:host .y-axis
+{
+    text-align: center;
+    padding-right: 30px;
+}
+
+
+:host .days
+{
+    font-style: italic;
+    font-size: 85%;
+}
